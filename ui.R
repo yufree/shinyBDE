@@ -10,15 +10,22 @@ library(shiny)
 shinyUI(pageWithSidebar(
   
   # Application title
-  headerPanel("Database of PBDEs' RRTs"),
+  headerPanel("Database of PBDEs' RRTs on DB-5ms"),
   
   # Sidebar with a slider input for number of PBDEs
   sidebarPanel(
+    helpText("Select the index of  PBDEs congener and the prediction model"),
     sliderInput("index", 
-                "Index of PBDEs:", 
+                label = "Index of PBDEs:", 
                 min = 1, 
                 max = 209, 
-                value = 47)
+                value = 47),
+    selectInput("var", 
+                label = "Choose a model to predict RRT",
+                choices = c("Step forward","Step backward",
+                            "Lasso","Rigid regression",
+                            "Principal components regression","Partial least squares regression"),
+                selected = "Partial least squares regression")
   ),
   
   mainPanel(

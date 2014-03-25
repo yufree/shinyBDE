@@ -12,8 +12,8 @@ database <- read.table('PBDEpre')
 datapre <- apply(database,1,mean)
 
 shinyServer(function(input, output) {
-  
+  # print('1')
   output$text <- renderText({ 
-    paste("The BDE-",input$index," RRT is ",datapre[input$index])
+    paste("The BDE-",input$var," RRT is ",datapre[input$index])
   })
 })
