@@ -29,6 +29,7 @@ shinyUI(pageWithSidebar(
   ),
   
   mainPanel(
-    textOutput("text")
+    h3(textOutput("text")),
+    img(src="CopyOfRSE.png", height = 600, width = 600)
   )
 ))
