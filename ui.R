@@ -22,7 +22,7 @@ shinyUI(pageWithSidebar(
                 value = 47),
     selectInput("var", 
                 label = "Choose a model to predict RRT",
-                choices = c("Step forward","Step backward",
+                choices = c("Stepwise","SVM",
                             "Lasso","Rigid regression",
                             "Principal components regression","Partial least squares regression"),
                 selected = "Partial least squares regression")
