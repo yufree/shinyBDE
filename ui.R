@@ -25,11 +25,25 @@ shinyUI(pageWithSidebar(
                 choices = c("Stepwise","SVM",
                             "Lasso","Rigid regression",
                             "Principal components regression","Partial least squares regression"),
-                selected = "Partial least squares regression")
+                selected = "Partial least squares regression"),
+    br(),
+    br(),
+    br(),
+    br(),
+    br(),
+    br(),
+    br(),
+    img(src = "bigorb.png", height = 50, width = 50),
+    "shiny is a product of ", 
+    span("RStudio", style = "color:blue"),
+    br(),
+    img(src = "institution-logo-rcees.jpg", height = 50, width = 50),
+    "shinyBDE is a product of ", 
+    span("Miao YU", style = "color:blue")
   ),
   
   mainPanel(
     h3(textOutput("text")),
-    img(src="CopyOfRSE.png", height = 600, width = 600)
+    img(src="CopyOfRSE.png", height = 500, width = 500)
   )
 ))
