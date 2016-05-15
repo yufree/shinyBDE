@@ -33,6 +33,9 @@ shinyUI(pageWithSidebar(
     br(),
     br(),
     br(),
+    br(),
+    br(),
+    br(),
     img(src = "bigorb.png", height = 50, width = 50),
     "shiny is a product of ", 
     span("RStudio", style = "color:blue"),
@@ -43,7 +46,12 @@ shinyUI(pageWithSidebar(
   ),
   
   mainPanel(
-    h3(textOutput("text")),
-    img(src="CopyOfRSE.png", height = 500, width = 500)
+    p("The caculation of relative retention time(RRT) has changed from the following equation in Wei's paper:"),
+    img(src = "equation1.png", height = 50, width = 200),
+    p("into this equation to make the data comparable:"),
+    img(src = "equation2.png", height = 50, width = 200),
+    br(),
+    p(textOutput("text")),
+    img(src = "RSE.png", height = 400, width = 400)
   )
 ))

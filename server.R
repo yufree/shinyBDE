@@ -22,9 +22,9 @@ shinyServer(function(input, output) {
                    "Principal components regression" = pre[input$index,4],
                    "Partial least squares regression" = pre[input$index,5])
     
-    argss <- round(args,4)
+    argss <- round((0.4723-(0.6020+0.3980)*args)/(0.4723-0.3980),4)
     
-    argswei <- ifelse(input$index %in% datadb5ms$BDE,datadb5ms[datadb5ms[,1]==input$index,2],NA)
+    argswei <- round((0.4723-(0.6020+0.3980)*ifelse(input$index %in% datadb5ms$BDE,datadb5ms[datadb5ms[,1]==input$index,2],NA))/(0.4723-0.3980),4)
     
     paste("The RRT of BDE-",input$index," is ",argss," and in Wei's paper is ",argswei)
     
